@@ -4,8 +4,8 @@ from django.contrib import admin
 from .models import SignUP
 
 class SignUpAdmin(admin.ModelAdmin):
-    list_display = ["__unicode__","timestamp"]
-    class meta:
-        model = SignUP
+    list_display = ["__unicode__","timestamp","updated"]
+    # class meta:
+    #     model = SignUP
 
 admin.site.register(SignUP,SignUpAdmin)
