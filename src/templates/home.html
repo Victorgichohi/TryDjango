@@ -1,4 +1,6 @@
+
 {%extends "base.html"%}
+{% load crispy_forms_tags %}
 {% block jumbotron%}
 <h1>Navbar example</h1>
 <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
@@ -10,12 +12,16 @@
 {%endblock%}
 {%block content%}
 <h3>{{ template_title }}</h3>
+<div class="row">
+  <div class="col-sm-6 col-md-3"
 {{user}}
 {{request.user}}
 <form method="POST" action="">{% csrf_token %}
 
-{{ form }}
+{{ form|crispy }}
 {{title}}
-<input type="submit" value="sign up"/>
+<input class="btn btn-lg" type="submit" value="sign up"/>
 </form>
 {%endblock%}
+</div>
+</div>
