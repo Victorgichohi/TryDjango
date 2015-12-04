@@ -1,11 +1,16 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import SignUP
+
+from .forms import SignUpForm
+from .models import SignUp
 
 class SignUpAdmin(admin.ModelAdmin):
-    list_display = ["__unicode__","timestamp","updated"]
-    # class meta:
-    #     model = SignUP
+	list_display = ["__unicode__", "timestamp", "updated"]
+	form = SignUpForm
+	# class Meta:
+	# 	model = SignUp
 
-admin.site.register(SignUP,SignUpAdmin)
+
+
+admin.site.register(SignUp, SignUpAdmin)
