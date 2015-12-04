@@ -35,10 +35,13 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
+    'registration',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
     'newsletter'
+    
 )
 
 MIDDLEWARE_CLASSES = (
@@ -108,3 +111,7 @@ STATICFILES_DIRS=(
 )
 MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(os.path.dirname(BASE_DIR),"static_in_ev","media_root")
+
+# Registration Redux
+ACCOUNT_ACTIVATION_DAYS=7
+REGISTRATION_AUTO_LOGIN=True
