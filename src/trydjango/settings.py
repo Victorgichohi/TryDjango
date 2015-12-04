@@ -41,7 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'crispy_forms',
     'newsletter'
-    
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -115,3 +115,5 @@ MEDIA_ROOT=os.path.join(os.path.dirname(BASE_DIR),"static_in_ev","media_root")
 # Registration Redux
 ACCOUNT_ACTIVATION_DAYS=7
 REGISTRATION_AUTO_LOGIN=True
+SITE_ID=1
+LOGIN_REDIRECT_URL='/'
