@@ -79,10 +79,22 @@ WSGI_APPLICATION = 'trydjango.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+# postgress database
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'trydjangodb',
+        'USER': 'trydjangouser',
+        'PASSWORD': 'AMsupperMAN7470',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
